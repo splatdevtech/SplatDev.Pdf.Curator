@@ -9,7 +9,8 @@ namespace SplatDev.DigitalBookCurator.Tests
         {
             try
             {
-                var reader = IronPdf.PdfDocument.FromFile(@"D:\Curator\NEW\c++ how to program 8th.edition.pdf");
+                var path = Path.Combine(AppContext.BaseDirectory, "Asset", "ASP_NET_Core_Succinctly.pdf");
+                var reader = IronPdf.PdfDocument.FromFile(path);
                 Assert.IsNotNull(reader);
             }
             catch (Exception ex)
