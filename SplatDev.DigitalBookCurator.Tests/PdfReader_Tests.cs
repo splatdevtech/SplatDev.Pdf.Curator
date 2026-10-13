@@ -18,7 +18,8 @@ namespace SplatDev.DigitalBookCurator.Tests
         {
             //Arrange
             Mock<ILogger> logger = new();
-            var fullText = new PdfReader().ReadPdf(logger: logger.Object);
+            var path = Path.Combine(AppContext.BaseDirectory, "Asset", "ASP_NET_Core_Succinctly.pdf");
+            var fullText = new PdfReader().ReadPdf(logger: logger.Object, path: path);
 
             //Act
 
